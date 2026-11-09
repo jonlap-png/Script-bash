@@ -1,0 +1,11 @@
+virt-install \
+--name Alpine-KVM \
+--memory 2048 \
+--vcpus 2 \
+--disk path=$HOME/QEMU/Alpine/alpine-kvm.qcow2,format=qcow2,bus=virtio \
+--cdrom $HOME/QEMU/Alpine/alpine-standard-3.13.5-x86.iso \
+--network network=default,model=virtio \
+--graphics spice \
+--virt-type=kvm \
+--os-variant generic \
+--noautoconsole
